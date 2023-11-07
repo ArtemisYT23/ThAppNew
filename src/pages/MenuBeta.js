@@ -2,6 +2,7 @@ import { View, StyleSheet, TouchableOpacity, Text } from "react-native"
 import { useState } from "react";
 import { PublicRoute } from "../routes/routes";
 import { useNavigation } from '@react-navigation/native';
+import Clock from "../components/Clock";
 
 
 export default function MenuBeta() {
@@ -9,17 +10,22 @@ export default function MenuBeta() {
     const [dataButton, setDataButton] = useState([
         {
             id: 1,
-            name: "Scan Qr",
+            name: "Entrada",
             path: `${PublicRoute.scanQr}`
         },
         {
             id: 2,
-            name: "Managment",
+            name: "Almuerzo Entrada",
             path: `${PublicRoute.login}`
         },
         {
             id: 3,
-            name: "Stand Order",
+            name: "Almuerzo Salida",
+            path: `${PublicRoute.login}`
+        },
+        {
+            id: 4,
+            name: "Salida",
             path: `${PublicRoute.standOrder}`
         }
     ]);
@@ -31,6 +37,7 @@ export default function MenuBeta() {
 
     return (
         <View style={styles.container}>
+        <Clock />
             {dataButton ? (
                 dataButton.map((data, i) => (
                     <View key={i} style={styles.button}>
@@ -57,13 +64,13 @@ const styles = StyleSheet.create({
         alignItems: "center"
     },
     button: {
-        margin: 15,
-        backgroundColor: "#f7a224",
+        margin: 16,
+        backgroundColor: "#2b3d6d",
         width: "75%",
-        height: "6%",
+        height: "8%",
         justifyContent: "center",
         alignItems: "center",
-        borderRadius: 13,
+        borderRadius: 13
     },
     textStyle: {
         color: "white",

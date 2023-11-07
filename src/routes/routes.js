@@ -1,7 +1,7 @@
 export const PublicRoute = {
     login: 'login',
-    scanQr: 'scanQr',
-    menuOptions: 'menuOptions',
+    scanQr: 'Marcar',
+    menuOptions: 'Principal',
     standOrder: 'listasdeferias',
     standItem: 'standItem',
 }

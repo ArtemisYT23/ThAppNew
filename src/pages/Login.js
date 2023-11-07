@@ -7,11 +7,10 @@ import Welcome from "../components/Welcome";
 export default function Login() {
   return (
     <View>
-       <Logo />
+      <Logo />
       <Welcome />
       <Input />
       <SignUp />
     </View>
   );
 }
-

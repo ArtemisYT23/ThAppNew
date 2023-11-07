@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { PublicRoute } from "./src/routes/routes";
 import LoginScreen from "./src/pages/Login";
 import MenuBeta from "./src/pages/MenuBeta";
+import CaptureMark from './src/pages/CaptureMark';
 import { Provider } from "react-redux";
 import store from "./src/redux";
 
@@ -17,6 +18,8 @@ export default function App() {
           <Stack.Screen name={PublicRoute.login} component={LoginScreen} />
 
           <Stack.Screen name={PublicRoute.menuOptions} component={MenuBeta} />
+
+          <Stack.Screen name={PublicRoute.scanQr} component={CaptureMark} />
         </Stack.Navigator>
       </NavigationContainer>
       </Provider>
